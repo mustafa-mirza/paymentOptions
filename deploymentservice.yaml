@@ -29,7 +29,7 @@ spec:
             value: "true"
           - name: enable_avocado
             value: "true"
-        name: log4j-debian10-root-3x1-m-web-container
+          name: log4j-debian10-root-3x1-m-web-container
           ports:
             - containerPort: 8080 # The port that the container is running on in the cluster
 
