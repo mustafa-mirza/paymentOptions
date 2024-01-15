@@ -6,14 +6,14 @@ pipeline {
     stages{
         stage('Build Maven'){
             steps{
-                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/mustafa-mirza/springboot-sample']]])
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/mustafa-mirza/paymentOptions']]])
                 sh 'mvn clean install'
             }
         }
         stage('Build docker image'){
             steps{
                 script{
-                    sh 'docker build -t mustafamirza/springboot-sample .'
+                    sh 'docker build -t mustafamirza/paymentOptions .'
                 }
             }
         }
@@ -24,7 +24,7 @@ pipeline {
                    sh 'docker login -u mustafamirza -p ${dockerhubpwd}'
 
 }
-                   sh 'docker push mustafamirza/springboot-sample'
+                   sh 'docker push mustafamirza/paymentOptions'
                 }
             }
         }
