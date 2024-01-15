@@ -13,7 +13,7 @@ pipeline {
         stage('Build docker image'){
             steps{
                 script{
-                    sh 'docker build -t mustafamirza/paymentOptions .'
+                    sh 'docker build -t mustafamirza/paymentoptions .'
                 }
             }
         }
@@ -24,7 +24,7 @@ pipeline {
                    sh 'docker login -u mustafamirza -p ${dockerhubpwd}'
 
 }
-                   sh 'docker push mustafamirza/paymentOptions'
+                   sh 'docker push mustafamirza/paymentoptions'
                 }
             }
         }
