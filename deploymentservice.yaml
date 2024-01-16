@@ -18,13 +18,13 @@ spec:
           imagePullPolicy: Always
           env:
           - name: orch_ip
-            value: "192.168.103.112"
+            value: "192.168.103.96"
           - name: orch_port
             value: "8443"
           - name: plugin_id
-            value: "aee777f7-593b-419b-89c8-48982f847757"
+            value: "fd2656d0-d735-41a2-8303-f7f3b1475c2a"
           - name: client_password
-            value: "4V?iOPLKkZYl92!8II?cjR!72vFo8zQzDR7P"
+            value: "8YtJ=i_XDG35_=Zxuum!6V=O=e_bqHkxwf49"
           - name: conn_websocket
             value: "true"
           - name: enable_avocado
