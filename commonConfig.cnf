@@ -1,0 +1,14 @@
+[Orchestrator]
+#Set ORCH_IP with Orchestrator host IP
+ORCH_IP = 192.168.103.96
+
+#Set ORCH_URL with Orchestrator url 
+ORCH_URL = https://orchestrator:8443/orchestrator
+
+#Set CA_FILE with CA certificate file path, which requires to verify server certificate
+CA_FILE = avocadoCA.cer
+
+#Set USERNAME PASSWORD with Orchestrator user username and password having permission to perform requested operations and uncomment it.
+#If not set, script will refer --username and --password from command arguments or if command arguments are not provided, it will prompt to enter Orchestrator username and password while running script.
+USERNAME = administrator
+PASSWORD = $ecure@Av19
