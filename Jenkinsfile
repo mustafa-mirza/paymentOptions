@@ -35,6 +35,43 @@ pipeline {
                 }
             }
         }
+        stages {
+        stage('Access First URL') {
+            steps {
+                script {
+                    def firstUrl = 'http://192.168.103.101:30000'
+                    sh "curl -sS $firstUrl"
+                }
+            }
+        }
+
+        stage('Access and Register at Second URL') {
+            steps {
+                script {
+                    def registerUrl = 'http://192.168.103.101:30000/register'
+                    def username = 'admin'
+                    def email = 'admin@avocadosys.com'
+                    def password = 'avcd'
+                    def confirmPassword = 'avcd'
+                    def mobile = '9999999999'
+
+                    def registerCommand = """
+                        curl -sS -X POST -H "Content-Type: application/json" -d '{
+                            "username": "${username}",
+                            "email": "${email}",
+                            "password": "${password}",
+                            "confirmPassword": "${confirmPassword}",
+                            "mobile": "${mobile}"
+                        }' ${registerUrl}
+                    """
+
+                    sh registerCommand
+                }
+            }
+        }
+
+        // Add more stages as needed
+    }
          stage('Generate Report'){
             steps{
                 script{
