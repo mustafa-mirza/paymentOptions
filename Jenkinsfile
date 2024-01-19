@@ -35,7 +35,7 @@ pipeline {
                 }
             }
         }
-        stages {
+        
         stage('Access First URL') {
             steps {
                 script {
@@ -71,7 +71,7 @@ pipeline {
         }
 
         // Add more stages as needed
-    }
+
          stage('Generate Report'){
             steps{
                 script{
