@@ -77,6 +77,7 @@ pipeline {
             steps{
                 script{
                     sh 'python3 reportGenerator.py --fromdate "2024-01-15 00:00:01" --domain ACME --subdomain IT --reportType application_model_architecture'
+                    sh 'python3 reportGenerator.py --fromdate "2024-01-15 00:00:01" --domain ACME --subdomain IT --reportType application_model_threat_dragon_plus'
                 }
             }
         }
