@@ -32,6 +32,7 @@ pipeline {
             steps{
                 script{
                     kubernetesDeploy (configs: 'deploymentservice.yaml',kubeconfigId: 'k8s01config')
+                    sleep(time: 10, unit: "SECONDS")
                 }
             }
         }
