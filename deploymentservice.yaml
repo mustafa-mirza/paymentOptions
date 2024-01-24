@@ -18,7 +18,7 @@ spec:
           imagePullPolicy: Always
           env:
           - name: orch_ip
-            value: "192.168.103.96"
+            value: "192.168.103.115"
           - name: orch_port
             value: "8443"
           - name: plugin_id
