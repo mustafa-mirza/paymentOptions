@@ -22,9 +22,9 @@ spec:
           - name: orch_port
             value: "8443"
           - name: plugin_id
-            value: "908de448-7eda-4687-b28a-448bfce78fa8"
+            value: "18b6db9d-8564-49de-a86f-5378ffe0b258"
           - name: client_password
-            value: "N?8K?M$2mx9qptOe0Uazu!mD?o?0vp9CU0?M"
+            value: "24@h=_L8cwY2?6tb5?0B1giiLdD4_otR!d=J"
           - name: conn_websocket
             value: "true"
           - name: enable_avocado
